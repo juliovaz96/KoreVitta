@@ -87,14 +87,14 @@ Esse é o mercado para chegar a 10.000 usuários.
 	- Status (ativo / em risco / pausado)
 	- Próximo check-in
 	- Histórico
-2. **Protocolos Estruturados**
+2. **Protocolos Integrados Estruturados**
 	- Nutrição
-	- Treino básico
-	- Suplementação
-	- Templates reutilizáveis
-	- Versionamento
+	- Preparação Fisica
+	- Suplementação / Injetaveis
+	- Templates reutilizáveis de protocolos
+	- Versionamento de protocolos
 3. **Check-ins Automáticos**
-	- Cadência semanal/quinzenal
+	- Cadência semanal/quinzenal agendado por paciente pelo profissional
 	- Coleta estruturada
 	- Atualização automática de risco
 4. **Branding Leve**
@@ -112,8 +112,8 @@ Esse é o mercado para chegar a 10.000 usuários.
 
 **Hoje**
 - Checklist diário
-- Plano alimentar
-- Treino do dia
+- Plano alimentar detalhado
+- Treino do dia (exercicios, tracking de carga e evolução de carga)
 - Suplementação
 
 **Meu Progresso**
