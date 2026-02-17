@@ -1,0 +1,3 @@
+{
+  "/(professional)/patients/[id]/biomarkers/page": "app/(professional)/patients/[id]/biomarkers/page.js"
+}

@@ -1,0 +1,13 @@
+{
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(professional)/dashboard/page": "app/(professional)/dashboard/page.js",
+  "/(professional)/patients/[id]/page": "app/(professional)/patients/[id]/page.js",
+  "/(professional)/patients/[id]/protocol/page": "app/(professional)/patients/[id]/protocol/page.js",
+  "/(professional)/patients/page": "app/(professional)/patients/page.js",
+  "/(professional)/protocols/[id]/nutrition/page": "app/(professional)/protocols/[id]/nutrition/page.js",
+  "/(professional)/protocols/[id]/page": "app/(professional)/protocols/[id]/page.js",
+  "/(professional)/protocols/[id]/training/page": "app/(professional)/protocols/[id]/training/page.js",
+  "/(professional)/templates/apply/page": "app/(professional)/templates/apply/page.js",
+  "/(professional)/templates/page": "app/(professional)/templates/page.js",
+  "/page": "app/page.js"
+}

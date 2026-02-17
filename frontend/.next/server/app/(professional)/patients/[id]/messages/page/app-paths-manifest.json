@@ -1,0 +1,3 @@
+{
+  "/(professional)/patients/[id]/messages/page": "app/(professional)/patients/[id]/messages/page.js"
+}

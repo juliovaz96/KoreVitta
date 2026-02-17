@@ -1,0 +1,96 @@
+---
+config:
+  flowchart:
+    curve: linear
+    nodeSpacing: 90
+    rankSpacing: 90
+  layout: tidy-tree
+  theme: neutral
+  look: neo
+---
+flowchart LR
+ subgraph Professional["Profissional (Nutri / Personal)"]
+    direction TB
+        P2["Vê paciente: Perfil pendente"]
+        P1["Convida paciente por link"]
+        P3["Recebe anamnese/documentos"]
+        P4["Personaliza e aplica plano"]
+        P5["Publica protocolo inicial"]
+        P6["Acompanha evolução"]
+        P7["Responde no chat"]
+        P8["Analisa check-ins e ajusta plano"]
+        GOAL["Objetivos e métricas-alvo"]
+  end
+ subgraph Patient["Paciente (User)"]
+    direction TB
+        U2["Preenche anamnese"]
+        U1["Recebe/aceita convite"]
+        U3["Conclui anamnese"]
+        U4["Protocolo em preparação"]
+        U5["Recebe protocolo"]
+        U6["Executa plano"]
+        U7["Acompanha relatórios"]
+        U8["Interage no chat"]
+        U9["Faz check-ins"]
+  end
+ subgraph Support["Anamnese / Tracking"]
+    direction TB
+        A1["Define anamnese"]
+        A2["Upload de exames"]
+        T1["Registra macros/cardápio"]
+        T2["Registra treino físico"]
+        T3["Registra suplementação/água"]
+  end
+    P1 --> P2
+    P2 --> P3
+    P3 --> P4
+    P4 --> P5
+    P5 --> P6
+    P6 --> P7
+    P7 --> P8
+    P4 -- Define metas --> GOAL
+    U1 --> U2
+    U2 --> U3
+    U3 --> U4 & A1 & A2
+    U4 --> U5
+    U5 --> U6
+    U6 --> U7 & T1 & T2 & T3
+    U7 --> U8
+    U8 --> U9
+    P1 -.-> U1
+    U1 -.-> P2
+    U3 -.-> P3
+    P5 -.-> U5
+    U6 -.-> P6
+    U8 -.-> P7
+    U9 -.-> P8
+    Professional -.-> Patient
+    Patient -.-> Support
+
+     P2:::pro
+     P1:::pro
+     P3:::pro
+     P4:::pro
+     P5:::pro
+     P6:::pro
+     P7:::pro
+     P8:::pro
+     GOAL:::goal
+     U2:::pac
+     U1:::pac
+     U3:::pac
+     U4:::pac
+     U5:::pac
+     U6:::pac
+     U7:::pac
+     U8:::pac
+     U9:::pac
+     A1:::aux
+     A2:::aux
+     T1:::aux
+     T2:::aux
+     T3:::aux
+    classDef pro fill:#eef7ff,stroke:#3b82f6,stroke-width:1px,color:#222
+    classDef pac fill:#ecfdf5,stroke:#10b981,stroke-width:1px,color:#222
+    classDef aux fill:#fff7ed,stroke:#f97316,stroke-width:1px,color:#222
+    classDef goal fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px,color:#222

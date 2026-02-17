@@ -1,0 +1,326 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  --radius: 0.75rem;
+  --brand-kore: #0f172a;
+  --brand-vitta: #06b6d4;
+  --background: #0f172a;
+  --foreground: #f4fafa;
+  --card: #13243c;
+  --card-foreground: #f4fafa;
+  --popover: #13243c;
+  --popover-foreground: #f4fafa;
+  --primary: #06b6d4;
+  --primary-foreground: #08131f;
+  --secondary: #1a2b45;
+  --secondary-foreground: #dde3e3;
+  --muted: #1a2b45;
+  --muted-foreground: #a5b8be;
+  --accent: #1f334f;
+  --accent-foreground: #f4fafa;
+  --destructive: #ff6b6b;
+  --border: #2a3e5a;
+  --input: #2a3e5a;
+  --ring: color-mix(in oklab, #06b6d4 65%, transparent);
+  --chart-1: #06b6d4;
+  --chart-2: #4ad0e3;
+  --chart-3: #7adfea;
+  --chart-4: #c8f4fb;
+  --chart-5: #7b858a;
+  --sidebar: #122238;
+  --sidebar-foreground: #f4fafa;
+  --sidebar-primary: #06b6d4;
+  --sidebar-primary-foreground: #08131f;
+  --sidebar-accent: #1c2e48;
+  --sidebar-accent-foreground: #dde3e3;
+  --sidebar-border: #2a3e5a;
+  --sidebar-ring: color-mix(in oklab, #06b6d4 65%, transparent);
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f4fafa;
+  --card: #13243c;
+  --card-foreground: #f4fafa;
+  --popover: #13243c;
+  --popover-foreground: #f4fafa;
+  --primary: #06b6d4;
+  --primary-foreground: #08131f;
+  --secondary: #1a2b45;
+  --secondary-foreground: #dde3e3;
+  --muted: #1a2b45;
+  --muted-foreground: #a5b8be;
+  --accent: #1f334f;
+  --accent-foreground: #f4fafa;
+  --destructive: #ff6b6b;
+  --border: #2a3e5a;
+  --input: #2a3e5a;
+  --ring: color-mix(in oklab, #06b6d4 65%, transparent);
+  --chart-1: #06b6d4;
+  --chart-2: #4ad0e3;
+  --chart-3: #7adfea;
+  --chart-4: #c8f4fb;
+  --chart-5: #7b858a;
+  --sidebar: #122238;
+  --sidebar-foreground: #f4fafa;
+  --sidebar-primary: #06b6d4;
+  --sidebar-primary-foreground: #08131f;
+  --sidebar-accent: #1c2e48;
+  --sidebar-accent-foreground: #dde3e3;
+  --sidebar-border: #2a3e5a;
+  --sidebar-ring: color-mix(in oklab, #06b6d4 65%, transparent);
+}
+
+.light {
+  --background: #f4fafa;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #06b6d4;
+  --primary-foreground: #f4fafa;
+  --secondary: #dde3e3;
+  --secondary-foreground: #233247;
+  --muted: #ecf2f2;
+  --muted-foreground: #52646a;
+  --accent: #d1ffff;
+  --accent-foreground: #143246;
+  --destructive: #c73636;
+  --border: #c9d6d8;
+  --input: #c9d6d8;
+  --ring: color-mix(in oklab, #06b6d4 55%, transparent);
+  --chart-1: #06b6d4;
+  --chart-2: #06b6d4;
+  --chart-3: #4ad0e3;
+  --chart-4: #7adfea;
+  --chart-5: #0f172a;
+  --sidebar: #eef5f5;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #06b6d4;
+  --sidebar-primary-foreground: #f4fafa;
+  --sidebar-accent: #d1ffff;
+  --sidebar-accent-foreground: #143246;
+  --sidebar-border: #c9d6d8;
+  --sidebar-ring: color-mix(in oklab, #06b6d4 55%, transparent);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    @apply text-foreground antialiased;
+    line-height: 1.45;
+    background: var(--background);
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 28%, transparent);
+    color: var(--foreground);
+  }
+
+  textarea,
+  select {
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--input);
+    background: var(--background);
+    color: var(--foreground);
+    transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+  }
+
+  textarea {
+    min-height: 112px;
+    padding: 0.6rem 0.75rem;
+    line-height: 1.45;
+  }
+
+  select {
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-grid;
+    place-content: center;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--input);
+    background: var(--background);
+    transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+  }
+
+  input[type="checkbox"] {
+    border-radius: 0.3rem;
+  }
+
+  input[type="radio"] {
+    border-radius: 999px;
+  }
+
+  input[type="checkbox"]::before,
+  input[type="radio"]::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: scale(0);
+    transition: transform 120ms ease-in-out;
+    background: var(--primary-foreground);
+  }
+
+  input[type="checkbox"]::before {
+    clip-path: polygon(14% 44%, 0 59%, 43% 100%, 100% 18%, 84% 4%, 43% 62%);
+    width: 0.62rem;
+    height: 0.62rem;
+  }
+
+  input[type="radio"]::before {
+    border-radius: 999px;
+  }
+
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    border-color: var(--primary);
+    background: var(--primary);
+  }
+
+  input[type="checkbox"]:checked::before,
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+  textarea:focus-visible,
+  select:focus-visible,
+  input:focus-visible,
+  button:focus-visible,
+  a:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px color-mix(in oklab, var(--background) 85%, transparent),
+      0 0 0 4px color-mix(in oklab, var(--ring) 92%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .kv-surface {
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow:
+      0 1px 2px color-mix(in oklab, var(--foreground) 6%, transparent),
+      0 1px 3px color-mix(in oklab, var(--foreground) 10%, transparent);
+    transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+  }
+
+  .kv-glow {
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--primary) 25%, transparent),
+      0 8px 16px color-mix(in oklab, var(--primary) 26%, transparent);
+  }
+
+  .kv-pill {
+    @apply rounded-full border border-border bg-secondary px-2.5 py-1 text-[11px] font-medium text-muted-foreground;
+  }
+
+  .kv-title {
+    @apply text-2xl font-semibold tracking-tight leading-tight md:text-3xl;
+  }
+
+  .kv-subtitle {
+    @apply text-sm text-muted-foreground md:text-[15px];
+  }
+
+  .kv-table-wrap {
+    @apply overflow-x-auto rounded-xl border border-border;
+  }
+
+  .kv-table {
+    @apply min-w-full text-sm;
+  }
+
+  .kv-table thead tr {
+    @apply border-b border-border/70 bg-card/90 text-left text-muted-foreground backdrop-blur;
+  }
+
+  .kv-table thead th {
+    @apply sticky top-0 z-10 px-2 py-2 font-medium;
+  }
+
+  .kv-table tbody tr {
+    @apply border-b border-border/40 align-middle transition-colors hover:bg-accent/35;
+  }
+
+  .kv-table tbody td {
+    @apply px-2 py-3;
+  }
+}

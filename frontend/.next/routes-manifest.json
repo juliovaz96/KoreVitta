@@ -1,0 +1,332 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/invite/[token]",
+      "regex": "^/invite/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPtoken": "nxtPtoken"
+      },
+      "namedRegex": "^/invite/(?<nxtPtoken>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]",
+      "regex": "^/patients/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]/biomarkers",
+      "regex": "^/patients/([^/]+?)/biomarkers(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)/biomarkers(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]/checkins",
+      "regex": "^/patients/([^/]+?)/checkins(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)/checkins(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]/checkins/[checkinId]/review",
+      "regex": "^/patients/([^/]+?)/checkins/([^/]+?)/review(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid",
+        "nxtPcheckinId": "nxtPcheckinId"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)/checkins/(?<nxtPcheckinId>[^/]+?)/review(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]/hydration",
+      "regex": "^/patients/([^/]+?)/hydration(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)/hydration(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]/measurements",
+      "regex": "^/patients/([^/]+?)/measurements(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)/measurements(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]/messages",
+      "regex": "^/patients/([^/]+?)/messages(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)/messages(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]/photos",
+      "regex": "^/patients/([^/]+?)/photos(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)/photos(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]/progress",
+      "regex": "^/patients/([^/]+?)/progress(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)/progress(?:/)?$"
+    },
+    {
+      "page": "/patients/[id]/protocol",
+      "regex": "^/patients/([^/]+?)/protocol(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/patients/(?<nxtPid>[^/]+?)/protocol(?:/)?$"
+    },
+    {
+      "page": "/protocols/[id]",
+      "regex": "^/protocols/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/protocols/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/protocols/[id]/nutrition",
+      "regex": "^/protocols/([^/]+?)/nutrition(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/protocols/(?<nxtPid>[^/]+?)/nutrition(?:/)?$"
+    },
+    {
+      "page": "/protocols/[id]/training",
+      "regex": "^/protocols/([^/]+?)/training(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/protocols/(?<nxtPid>[^/]+?)/training(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/analytics",
+      "regex": "^/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/analytics(?:/)?$"
+    },
+    {
+      "page": "/analytics/audit",
+      "regex": "^/analytics/audit(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/analytics/audit(?:/)?$"
+    },
+    {
+      "page": "/analytics/protocol-effectiveness",
+      "regex": "^/analytics/protocol\\-effectiveness(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/analytics/protocol\\-effectiveness(?:/)?$"
+    },
+    {
+      "page": "/api/mock/screen-state",
+      "regex": "^/api/mock/screen\\-state(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mock/screen\\-state(?:/)?$"
+    },
+    {
+      "page": "/checkin",
+      "regex": "^/checkin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/checkin(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/forgot-password",
+      "regex": "^/forgot\\-password(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/forgot\\-password(?:/)?$"
+    },
+    {
+      "page": "/home",
+      "regex": "^/home(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/home(?:/)?$"
+    },
+    {
+      "page": "/hydration",
+      "regex": "^/hydration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hydration(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/messages",
+      "regex": "^/messages(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/messages(?:/)?$"
+    },
+    {
+      "page": "/onboarding",
+      "regex": "^/onboarding(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/onboarding(?:/)?$"
+    },
+    {
+      "page": "/patients",
+      "regex": "^/patients(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/patients(?:/)?$"
+    },
+    {
+      "page": "/patients/new",
+      "regex": "^/patients/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/patients/new(?:/)?$"
+    },
+    {
+      "page": "/progress",
+      "regex": "^/progress(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/progress(?:/)?$"
+    },
+    {
+      "page": "/protocol",
+      "regex": "^/protocol(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/protocol(?:/)?$"
+    },
+    {
+      "page": "/register",
+      "regex": "^/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/register(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/settings/branding",
+      "regex": "^/settings/branding(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/settings/branding(?:/)?$"
+    },
+    {
+      "page": "/settings/profile",
+      "regex": "^/settings/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/settings/profile(?:/)?$"
+    },
+    {
+      "page": "/settings/subscription",
+      "regex": "^/settings/subscription(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/settings/subscription(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/templates",
+      "regex": "^/templates(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/templates(?:/)?$"
+    },
+    {
+      "page": "/templates/apply",
+      "regex": "^/templates/apply(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/templates/apply(?:/)?$"
+    },
+    {
+      "page": "/today",
+      "regex": "^/today(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/today(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

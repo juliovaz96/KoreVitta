@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(professional)/layout,_N_T_/(professional)/settings/layout,_N_T_/(professional)/settings/subscription/layout,_N_T_/(professional)/settings/subscription/page,_N_T_/settings/subscription"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHByb2Zlc3Npb25hbCk/settings/subscription/__PAGE__",
+    "/!KHByb2Zlc3Npb25hbCk/settings/subscription",
+    "/!KHByb2Zlc3Npb25hbCk/settings",
+    "/!KHByb2Zlc3Npb25hbCk",
+    "/_index",
+    "/_head"
+  ]
+}

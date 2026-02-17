@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /invite/
+
+Host: https://app.korevitta.com
+Sitemap: https://app.korevitta.com/sitemap.xml

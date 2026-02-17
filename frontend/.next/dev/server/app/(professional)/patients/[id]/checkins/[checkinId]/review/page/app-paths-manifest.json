@@ -1,0 +1,3 @@
+{
+  "/(professional)/patients/[id]/checkins/[checkinId]/review/page": "app/(professional)/patients/[id]/checkins/[checkinId]/review/page.js"
+}

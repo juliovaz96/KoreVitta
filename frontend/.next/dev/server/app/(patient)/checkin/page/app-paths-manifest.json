@@ -1,0 +1,3 @@
+{
+  "/(patient)/checkin/page": "app/(patient)/checkin/page.js"
+}
