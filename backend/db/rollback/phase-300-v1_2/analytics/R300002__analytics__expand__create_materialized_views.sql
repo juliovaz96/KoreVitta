@@ -1,0 +1,4 @@
+BEGIN;
+DROP MATERIALIZED VIEW IF EXISTS mv_protocol_effectiveness;
+DROP MATERIALIZED VIEW IF EXISTS mv_patient_dashboard;
+COMMIT;

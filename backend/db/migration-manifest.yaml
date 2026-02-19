@@ -1,0 +1,58 @@
+version: 1
+project: korevitta-data-platform
+strategy: sql-first
+convention:
+  pattern: "V{phase}{seq}__{domain}__{change_type}__{slug}.sql"
+  rollback_pattern: "R{phase}{seq}__{domain}__{change_type}__{slug}.sql"
+  change_type: [expand, contract]
+
+phases:
+  - id: phase-000-bootstrap
+    order: 0
+    domains: [global]
+    migrations:
+      - migrations/phase-000-bootstrap/global/V000001__global__expand__extensions_and_types.sql
+      - migrations/phase-000-bootstrap/global/V000002__global__expand__schema_meta_and_guardrails.sql
+      - migrations/phase-000-bootstrap/global/V000003__global__expand__create_migration_smoke_test.sql
+    seeds:
+      - seeds/phase-000-bootstrap/S000001__bootstrap__seed_biomarker_catalog.sql
+
+  - id: phase-100-mvp
+    order: 100
+    domains: [identity, core, protocol, checkin, daily, communication]
+    migrations:
+      - migrations/phase-100-mvp/identity/V100001__identity__expand__create_users.sql
+      - migrations/phase-100-mvp/identity/V100002__identity__expand__create_professionals_subscriptions.sql
+      - migrations/phase-100-mvp/core/V100003__core__expand__create_branding.sql
+      - migrations/phase-100-mvp/core/V100004__core__expand__create_patients.sql
+      - migrations/phase-100-mvp/protocol/V100005__protocol__expand__create_protocol_bundle_core.sql
+      - migrations/phase-100-mvp/protocol/V100006__protocol__expand__create_nutrition_and_training.sql
+      - migrations/phase-100-mvp/checkin/V100007__checkin__expand__create_checkin_tables.sql
+      - migrations/phase-100-mvp/daily/V100008__daily__expand__create_daily_tracking.sql
+      - migrations/phase-100-mvp/communication/V100009__communication__expand__create_threads_messages.sql
+      - migrations/phase-100-mvp/core/V100010__core__expand__rls_patient_read_mvp.sql
+    seeds:
+      - seeds/phase-100-mvp/S100001__mvp__seed_default_checkin_form_schema.sql
+
+  - id: phase-200-v1_1
+    order: 200
+    domains: [protocol, hydration, progress]
+    migrations:
+      - migrations/phase-200-v1_1/protocol/V200001__protocol__expand__create_templates_and_versions.sql
+      - migrations/phase-200-v1_1/hydration/V200002__hydration__expand__create_hydration_and_water_logs.sql
+      - migrations/phase-200-v1_1/progress/V200003__progress__expand__create_body_measurements_and_photos.sql
+      - migrations/phase-200-v1_1/protocol/V200004__protocol__expand__create_supplementation.sql
+    seeds:
+      - seeds/phase-200-v1_1/S200001__v1_1__seed_body_sites_and_photo_positions.sql
+
+  - id: phase-300-v1_2
+    order: 300
+    domains: [analytics, audit]
+    migrations:
+      - migrations/phase-300-v1_2/analytics/V300001__analytics__expand__create_body_compositions_biomarkers.sql
+      - migrations/phase-300-v1_2/analytics/V300002__analytics__expand__create_materialized_views.sql
+      - migrations/phase-300-v1_2/audit/V300003__audit__expand__create_audit_log_partitioned.sql
+      - migrations/phase-300-v1_2/analytics/V300004__analytics__expand__schedule_mv_refresh_pg_cron.sql
+      - migrations/phase-300-v1_2/analytics/V300005__analytics__expand__partition_maintenance_setup.sql
+    seeds:
+      - seeds/phase-300-v1_2/S300001__v1_2__seed_biomarker_reference_ranges.sql

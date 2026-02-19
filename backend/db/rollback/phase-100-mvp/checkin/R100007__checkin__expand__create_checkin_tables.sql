@@ -1,0 +1,4 @@
+BEGIN;
+DROP TABLE IF EXISTS checkins;
+DROP TABLE IF EXISTS checkin_schedules;
+COMMIT;

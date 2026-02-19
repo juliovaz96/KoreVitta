@@ -1,0 +1,7 @@
+BEGIN;
+DROP TABLE IF EXISTS training_exercises;
+DROP TABLE IF EXISTS training_plans;
+DROP TABLE IF EXISTS meal_items;
+DROP TABLE IF EXISTS meals;
+DROP TABLE IF EXISTS meal_plans;
+COMMIT;
